@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>戦国一本道 — 移动端实机画面审核</title>
+  <style>
+    :root {
+      --bg: #0f0d0c;
+      --card: #1a1614;
+      --gold: #f2c44d;
+      --cyan: #4de2ff;
+      --text: #f5f1ea;
+      --muted: #a69d91;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 16px 14px 48px;
+      line-height: 1.5;
+    }
+    header {
+      text-align: center;
+      padding: 12px 0 18px;
+      border-bottom: 1px solid rgba(242, 196, 77, 0.25);
+      margin-bottom: 18px;
+    }
+    header h1 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 0.5px;
+    }
+    header p {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(77, 226, 255, 0.16);
+      color: var(--cyan);
+      border: 1px solid rgba(77, 226, 255, 0.45);
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(242, 196, 77, 0.22);
+      border-radius: 16px;
+      padding: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    }
+    .card h2 {
+      font-size: 15px;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .card p {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .media-wrap {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      justify-content: center;
+    }
+    video, img {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .compare-col {
+      text-align: center;
+    }
+    .compare-col span {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+    .tag-new { color: var(--cyan) !important; }
+    .tag-old { color: #ff7a70 !important; }
+    .hint {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>戦国一本道 · 实机画质审核</h1>
+    <p>HD-2.5D 真 3D 战场引擎（SceneKit/Metal + Google Flow Pro）</p>
+    <div class="badge">更新：2026-11-27 18:28 · 0 额外订阅费</div>
+  </header>
+
+  <section class="card">
+    <h2>1. 实机录制视频（HD-2.5D 真 3D 实战）</h2>
+    <p>真 3D 透视近大远小 + 1.8MB 石板法线凹凸 + 3D 翘角发光鸟居 + 3D 滚动木桶 + 三骑 Veo 3 8帧真奔腾 + 全新写实黑铁鬼面敌军</p>
+    <div class="media-wrap">
+      <video autoplay loop muted playsinline controls poster="media/hd25d_battle.jpg">
+        <source src="media/hd25d_battle.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2. 新旧实机同屏对比（点击图片可放大）</h2>
+    <p>左：最新 HD-2.5D 真 3D 实机 ｜ 右：升级前旧版 2D 贴片</p>
+    <div class="compare-grid">
+      <div class="compare-col">
+        <span class="tag-new">NEW · HD-2.5D 真 3D</span>
+        <a href="media/hd25d_battle.jpg"><img src="media/hd25d_battle.jpg" alt="HD-2.5D 新版实机" /></a>
+      </div>
+      <div class="compare-col">
+        <span class="tag-old">OLD · 旧版 2D</span>
+        <a href="media/old_2d_battle.jpg"><img src="media/old_2d_battle.jpg" alt="旧版 2D 实机" /></a>
+      </div>
+    </div>
+    <div class="hint">轻点任意图片可在手机全屏查看原图细节</div>
+  </section>
+
+  <section class="card">
+    <h2>3. 高清大图：最新 HD-2.5D 真 3D 实战</h2>
+    <div class="media-wrap">
+      <a href="media/hd25d_battle.jpg"><img src="media/hd25d_battle.jpg" alt="HD-2.5D 实战大图" /></a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>4. 单匹「松风」Veo 3 8帧真奔腾动图（零绿边）</h2>
+    <div class="media-wrap">
+      <img src="media/matsukaze_gallop.gif" alt="松风 8 帧奔腾" />
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>5. 战前布阵：原生 90% 超宽日光大道 + 先阵三骑名马</h2>
+    <div class="media-wrap">
+      <a href="media/prebattle_3horses.jpg"><img src="media/prebattle_3horses.jpg" alt="战前布阵三骑" /></a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>6. 备选参考：Tripo H3.5 生成的 477 万面真 3D 松风</h2>
+    <p>已在你的 Tripo Studio 账号中生成完毕（如需订阅导出 .glb 即可直接换入真 3D 引擎）</p>
+    <div class="media-wrap">
+      <a href="media/tripo_3d_matsukaze.jpg"><img src="media/tripo_3d_matsukaze.jpg" alt="Tripo 3D 高模" /></a>
+    </div>
+  </section>
+</body>
+</html>
